@@ -1,0 +1,88 @@
+Variable (bien): Co 6 loai bien 
+    - Biên toàn cục (global variables): Biến này được đặt ngoài class và có gọi bất cứ nơi nào. Cách viêt $ + tenbien. (tenbien phân biệt chữ hoa và chữ thường)
+    - Hằng số (constant): Viết in toàn bộ và giá trị chỉ được gán 1 lần. Không được thay đổi
+    - Biến cục bộ (local variables): Viết thường, chỉ có tác dụng trong phương thức chứa nó. Ngoài phương thức chứa nó thì không gọi được.
+    - (instance variables): Bắt đầu bằng dấu @ + tenbien. Có tác dụng trong toàn class. Trong biến này còn chia ra 2 loại nữa.
+    - Biến Class: @@ + tenbien: Lưu tạm thời data sinh ra
+Proc: 
+    - Proc sinh ra de tranh viec lap lai code cua Block vi Block khong su dung lai duoc.
+    - Proc la object
+Lambda: 
+Method: Co 2 loai
+    - Instance method: khong co self. Khi goi phai new doi tuong ra.
+    - Class method: Co self. Khi goi khong can new doi tuong ra.
+Block: 
+    - Block la code giai thich nhung gi can lam. No la thu duy nhat trong Ruby khong phai la doi tuong.
+    - Vi block khong phai la doi tuong nen no khong the duoc luu tru vao cac bien va khong co tat ca cac quyen han ma doi tuong khac co
+    - Co the duoc dinh nghia bang tu khoa do..end hoac {} 
+    - Block la mot khoi lenh.
+Mảng:
+    - Nếu bạn muốn lưu một phạm vi số hoặc đóng gói nhiều giá trị vào một biến, thì bạn sử dụng cấu trúc dữ liệu được gọi là một mảng.
+    - Một mảng là một danh sách các mục giữa dấu ngoặc vuông. Dữ liệu bên trong một mảng không phải theo bất kỳ thứ tự nào và các mảng có thể chứa bất kỳ loại
+    dữ liệu nào, cho dù đó là một chuỗi, một số nguyên, booleans, các đối tượng, thậm chí là các mảng bổ sung.
+    - Có thể truy cập từng phần tử bên trong mảng như: example_array[0]. Mảng bắt đầu đếm từ 0.
+    - Có thể thêm vào 1 mảng theo 2 cách sau: example_array.push("String") hoặc example_array << "string"
+    - Iterating over Arrays (Lặp lại qua mảng): Cú pháp lặp lại các mảng: example_array {|i| puts i}
+Hash: 
+    - Hash la tap hop cac cap khoa gia tri nhu: "employee" => "salary". Chung tuong tu nhu Array , ngoai tru index thong qua cac 
+    khoa tuy y cua bat ky doi tuong nao, khong phai la so nguyen.
+    - Thu tu duyet qua cac ham bam bang khoa hoac gia tri co the tuy y va thuong khong theo thu tu chen. Neu co gang truy cap ham bam voi khoa khong
+    ton tai, phuong thuc se tra ve nil
+
+Module:
+    - Module giong nhu cong cu chua cac phuong thuc va hang
+    - Module giong voi Class ngoai tru chung khong the tao instance va cac lop con
+    - Module luu tru nhung cai ma ban co the su dung sau nay
+
+Getter va Setter trong Ruby:
+
+Monkey Pathcing: 
+    - Thêm method
+    - override method
+
+MetaProgramming: Code sinh ra Code
+    - MetaProgramming duoc hieu don gian la code sinh ra code. Nghia la minh viet mot chuong trinh va chuong trinh nay sinh ra
+    dieu khien cac chuong trinh khac hoac lam mot phan viec o thoi diem bien dich.
+    - Giup source cua chung ta tro nen ngan gon hon, giam thieu van de duplicate, nhu cac method co chuc nang tuong tu nhau trong code
+    De dang chinh sua, giup he thong tro nen gon nhe muot ma hon.
+    - Lợi: Dynamic.
+
+class B
+    include A  - > module A \n def self.included kclass end \n end
+    extend A -> module A \n def self.extended kclass end \n end
+end
+
+Đa hình là method trùng tên nhưng tham số khác nhau.
+    Ruby không có tính đa hình. Nếu muốn thì sử dụng if...
+
+Open Class
+
+Mixin ruby:
+ - Mixin cơ bản là một module được đưa vào trong class. Khi bạn include một module vào trong một class, class đó có quyền truy cập vào các method của module.
+ - Các phương thức của Module được include vào một class có thể là Class Method hoặc Instance Method tùy thuộc vào cách bạn thêm Mixin vào class đó.
+
+Lập trình hàm: Kq của hàm thứ 1 là input của hàm thứ 2.
+
+Bang method là method kết thúc bằng dấu !. Được dùng khi nào mình muốn thay đổi giá trị object đầu vào hoặc điều hướng flow.
+
+Boolean method là method kết thúc bằng dấu ?. Trả về True or False 
+
+Section3: Scope trong Ruby
+
+Closure: 
+    - Closure là function ẩn danh 
+    - Closure là lambda
+
+Top level context:
+    - Đơn giản là một cái scope của Ruby. Không gian
+    - Nó nằm ngoài không gian của class
+    - Không gian bên trong modul và class được gọi là Scope class
+    - Top level nó ảnh hưởng đến giá trị của biến.
+    - VD: 2 cái nhà khác nhau mà nằm trong 2 xóm khác nhau thì nó khác nhau.
+
+Singleton: 
+
+
+
+WEB SERVER
+- Ruby dung Rack
